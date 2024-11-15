@@ -3,8 +3,7 @@ import { Layout, Menu, Button, Dropdown, Avatar, message } from "antd";
 import { UserOutlined, LogoutOutlined } from "@ant-design/icons";
 import { auth } from "../Api_router/Firebase"; // Import Firebase authentication
 import { signOut } from "firebase/auth"; // Import signOut method
-import { Link, Routes, Route, useNavigate, useParams } from "react-router-dom";
-import params from useParams()
+import { Link, Routes, Route, useNavigate } from "react-router-dom"; // Removed useParams import
 import Posts from "./Posts";
 import Comments from "./Comments";
 import Albums from "./Albums";
@@ -81,7 +80,7 @@ const Dashboard = () => {
       <Layout style={{ marginLeft: collapsed ? 80 : 200 }}>
         {/* Header with Avatar and User Menu */}
         <Header className="flex justify-between items-center px-4 bg-blue-500 text-white">
-          <div className="text-xl font-bold">{params}</div>
+          <div className="text-xl font-bold">Dashboard</div> {/* Removed params */}
           <div className="flex items-center gap-4">
             {/* Display Avatar */}
             <Avatar size="large" icon={<UserOutlined />} src={avatarUrl} />
