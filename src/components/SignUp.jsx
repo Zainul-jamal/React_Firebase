@@ -26,7 +26,7 @@ const SignUp = () => {
       });
 
       // Save user data to Firestore
-      await setDoc(doc(db, "users", userCredential.user.uid), {
+      await setDoc(doc(db, "SignUp_Data", userCredential.user.uid), {
         uid: userCredential.user.uid,
         name: values.name,
         email: values.email,
